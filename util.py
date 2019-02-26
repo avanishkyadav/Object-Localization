@@ -4,20 +4,20 @@ import cv2
 import matplotlib.pyplot as plt
 
 def prepareDataset():
-    train=pd.read_csv("/data/dataset.csv")
+    train=pd.read_csv("data/dataset.csv")
     train=train.set_index('image_name')
     X=[]
     for index,row in train.iterrows():
-        img=cv2.resize(cv2.imread("/data/images/"+index),(120,90))
+        img=cv2.resize(cv2.imread("data/images/"+index),(120,90))
         X.append(img)
     X=np.array(X)
-    np.save("/data/X.npy",X)
+    np.save("data/X.npy",X)
     Y=train.as_matrix()
-    np.save("/data/Y.npy",Y)
+    np.save("data/Y.npy",Y)
 
 def load_dataset():
-    X=np.load("/data/X.npy")/255
-    Y=np.load("/data/Y.npy")
+    X=np.load("data/X.npy")/255
+    Y=np.load("data/Y.npy")
     m=X.shape[0]
     permutation=np.random.permutation(range(m))
     X=X[permutation]

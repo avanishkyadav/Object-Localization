@@ -2,11 +2,20 @@
 
 This project uses a 56 layers residual network to localize an object in an image. 
 
+![alt text](Sample%20Images/boxed1.jpg)
+
+![alt text](Sample%20Images/boxed2.jpg)
+
+![alt text](Sample%20Images/boxed3.jpg)
+
+![alt text](Sample%20Images/boxed4.png)
+
 ## Dependencies
 * Numpy
 * Pandas
 * OpenCV
 * Keras
+* os
 * Matplotlib
 
 
